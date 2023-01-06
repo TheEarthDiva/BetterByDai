@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="bbdico.jpg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Better By Dai</title>
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+        <style> @import url('https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400&family=Montserrat&family=Playfair+Display&display=swap'); </style>
+        <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar bg-body-tertiary">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="assets/betterbyDailogo.png" alt="Better By Dai logo" width="247" height="80">
+        </a>
+      </div>
+    </nav>
+
+    <div class="hero-image"></div>
+
+    <div class="intro-para">
+      <p>Looking for a way to start your day off right and stay connected to your faith? Our custom daily devotion tool is just what you need! With this tool, you'll receive personalized devotions tailored to your unique needs and interests any time you want them. You'll be able to read through inspiring passages and reflect on their meaning in your life, all while deepening your connection to God. Whether you're a seasoned believer or just starting your journey, this tool is an excellent resource for anyone looking to grow in their faith. Try it out today and start your day off with a burst of spiritual nourishment!</p>
+      <p>For best results: Input a topic, a specific bible verse, a person from the bible, or a struggle you're facing.</p>
+    </div>
+
+    <div class="container mycontainer">
+<!-- app div is the entire space the form and chat return will be -->
+      <div id="app">
+        <form>
+ <!--         <div class="mb-3">
+            <div class="mb-3 input-group">
+              <label for="devTopic" class="input-group-text" id="devTopicDesc">What would you like your devotion to be about today?</label>
+              <input type="text" class="form-control devTopic" id="devTopic" aria-describedby="devTopicDesc">
+            </div>
+          </div>   -->
+
+          <div class="mb-3">
+            <label for="devTopic" class="formbuilder-text-label">Enter the name of the store</label>
+            <input type="text" class="form-control devTopic" name="devTopic" access="false" id="text-16725430185">
+        </div>
+
+          <div class="formbuilder-button form-group text-center">
+              <button type="submit" class="btn btn-outline-success">Submit</button>
+          </div>
+        </form>
+        <div><br></div>
+        <div id="chat_container"></div>
+      </div>
+
+      <div class="bottomspace">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+    </div>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

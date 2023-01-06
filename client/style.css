@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400&family=Montserrat&family=Playfair+Display&display=swap');
+
+body {
+	font-family: 'Jost', sans-serif;
+  font-weight: 300;
+}
+
+.hero-image {
+  background-image: url(assets/header.jpg);
+  height: 250px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.mycontainer {
+    margin-top: 50px;
+}
+
+.intro-para {
+  max-width: 1000px;
+  margin-top: 75px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+label {
+    line-height: 2.5;
+}
+
+#chat_container {
+    border: 2px solid #23c0c7;
+    border-radius: 5px;
+    background-color: #fffad2;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.formbuilder-checkbox-inline {
+    display: flex;
+}
+
+.btn {
+  background-color: transparent;
+  color: #12959b;
+  border: 2px solid #23c0c7;
+  padding: 10px 40px;
+}
+
+ .btn:hover {
+  background-color: #23c0c7;
+  color: white;
+  border: 2px solid #23c0c7;
+ }
