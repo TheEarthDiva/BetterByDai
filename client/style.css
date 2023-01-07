@@ -5,6 +5,14 @@ body {
   font-weight: 300;
 }
 
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+h2 {
+  font-size: 22pt;
+}
+
 .hero-image {
   background-image: url(assets/header.jpg);
   height: 250px;
@@ -16,6 +24,7 @@ body {
 
 .mycontainer {
     margin-top: 50px;
+    max-width: 1000px;
 }
 
 .intro-para {
@@ -36,10 +45,16 @@ label {
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 120px;
+    padding: 40px;
 }
 
 .formbuilder-checkbox-inline {
     display: flex;
+}
+
+form {
+  padding: 0 100px;
 }
 
 .btn {
@@ -54,3 +69,51 @@ label {
   color: white;
   border: 2px solid #23c0c7;
  }
+
+ .bdr {
+  border: 3px solid black;
+  margin-bottom: 20px;
+  padding: 20px;
+ }
+
+ .smalltext {
+  text-align: center;
+  margin-top: 8px;
+  margin-bottom: 15px;
+ }
+
+ a {
+  color: #12959b;
+ }
+
+ a:hover {
+  color: #23c0c7;
+ }
+
+ .coffee-section {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assets/coffeebkg.jpg);
+  height: 250px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+ }
+
+ .coffeebtndiv {
+  margin: auto;
+  text-align: center;
+ }
+
+ .coffeebtn {
+  width: 75%;
+  max-width: 300px;
+ }
+
+ .coffeetxtbox {
+  color: white;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-right: 100px;
+ }
+
+ 

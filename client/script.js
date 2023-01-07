@@ -23,9 +23,12 @@ function loader(element) {
 function typeText(element, text) {
     let index = 0
 
+    text = text.replace(/\\n/g, "<br>");
+
     let interval = setInterval(() => {
         if (index < text.length) {
-            element.innerHTML += text.charAt(index)
+            element.innerHTML = text;  //This is the line I added to make the page breaks work!!
+//            element.innerHTML += text.charAt(index)  //For now I can't do both paragraph breaks and one at a time typing. 
             index++
         } else {
             clearInterval(interval)
@@ -81,6 +84,7 @@ const handleSubmit = async (e) => {
     // messageDiv.innerHTML = "..."
     loader(messageDiv)
 
+    // https://betterbydai.onrender.com   http://localhost:3000
     const response = await fetch('https://betterbydai.onrender.com', {
         method: 'POST',
         headers: {
