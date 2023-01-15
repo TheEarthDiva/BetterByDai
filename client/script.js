@@ -60,13 +60,15 @@ function chatStripe(isAi, value, uniqueId) {
     )
 }
 
+form.addEventListener('submit', handleSubmit)
+
 const handleSubmit = async (e) => {
     e.preventDefault()
 
     const data = new FormData(form)
 
     // user's chatstripe
-    chatContainer.innerHTML += chatStripe(false, data.get('devTopic','storeCity','visitDate','difLvlToFind','difLvlToUse','disabledSpaces','parkingKeywords','lobbyAesthetic','lobbySize','lobbySpeed','lobbyAtmos','lobbyLighting','lobbyDisplays','lobbyKeywords','btDesc','btComfort','btKnowledge','btQuestion','btKeywords','cOpkgDesc','coPmt','coKeywords','unboxDiff','unboxRateClr','unboxAppeal','unboxColors','unboxOdorInt','unboxOdorNotes','unboxKeywords','prepOdorNotes','prepMoisture','prepTasteNotes','prepKeywords','finalTasteRate','finalTasteNotes','finalEven','finalAshClr','finalMed','finalKeywords'))
+    chatContainer.innerHTML += chatStripe(false, data.get('devTopic'))
 
     // to clear the textarea input 
     form.reset()
@@ -91,46 +93,7 @@ const handleSubmit = async (e) => {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-            devTopic: data.get('devTopic'),
-            storeCity: data.get('storeCity'),
-            visitDate: data.get('visitDate'),
-            difLvlToFind: data.get('difLvlToFind'),
-            difLvlToUse: data.get('difLvlToUse'),
-            disabledSpaces: data.get('disabledSpaces'),
-            parkingKeywords: data.get('parkingKeywords'),
-            lobbyAesthetic: data.get('lobbyAesthetic'),
-            lobbySize: data.get('lobbySize'),
-            lobbySpeed: data.get('lobbySpeed'),
-            lobbyAtmos: data.get('lobbyAtmos'),
-            lobbyLighting: data.get('lobbyLighting'),
-            lobbyDisplays: data.get('lobbyDisplays'),
-            lobbyKeywords: data.get('lobbyKeywords'),
-            btDesc: data.get('btDesc'),
-            btComfort: data.get('btComfort'),
-            btKnowledge: data.get('btKnowledge'),
-            btQuestion: data.get('btQuestion'),
-            btKeywords: data.get('btKeywords'),
-            cOpkgDesc: data.get('cOpkgDesc'),
-            coPmt: data.get('coPmt'),
-            coKeywords: data.get('coKeywords'),
-            unboxDiff: data.get('unboxDiff'),
-            strain: data.get('strain'),
-            unboxRateClr: data.get('unboxRateClr'),
-            unboxAppeal: data.get('unboxAppeal'),
-            unboxColors: data.get('unboxColors'),
-            unboxOdorInt: data.get('unboxOdorInt'),
-            unboxOdorNotes: data.get('unboxOdorNotes'),
-            unboxKeywords: data.get('unboxKeywords'),
-            prepOdorNotes: data.get('prepOdorNotes'),
-            prepMoisture: data.get('prepMoisture'),
-            prepTasteNotes: data.get('prepTasteNotes'),
-            prepKeywords: data.get('prepKeywords'),
-            finalTasteRate: data.get('finalTasteRate'),
-            finalTasteNotes: data.get('finalTasteNotes'),
-            finalEven: data.get('finalEven'),
-            finalAshClr: data.get('finalAshClr'),
-            finalMed: data.get('finalMed'),
-            finalKeywords: data.get('finalKeywords')
+            devTopic: data.get('devTopic')
         })
     })
 
@@ -155,4 +118,3 @@ const handleSubmit = async (e) => {
     }
 }
 
-form.addEventListener('submit', handleSubmit)
