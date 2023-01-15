@@ -3,14 +3,6 @@ import * as dotenv from 'dotenv'
 import cors from 'cors'
 import { Configuration, OpenAIApi } from 'openai'
 
-app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "https://jadestees.com");
-  res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
-  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
-  res.setHeader("Access-Control-Allow-Credentials", "true");
-  next();
-});
-
 dotenv.config()
 
 console.log(process.env.OPENAI_API_KEY)
@@ -33,6 +25,11 @@ app.get('/', async (req, res) => {
 
 app.post('/', async (req, res) => {
   try {
+    res.setHeader("Access-Control-Allow-Origin", "https://jadestees.com"); // this is where you add the header
+    res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+    res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+    res.setHeader("Access-Control-Allow-Credentials", "true");
+    
     const devTopic = req.body.devTopic;
 
     const response = await openai.createCompletion({
