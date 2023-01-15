@@ -25,12 +25,46 @@ app.get('/', async (req, res) => {
 
 app.post('/', async (req, res) => {
   try {
-    res.setHeader("Access-Control-Allow-Origin", "https://jadestees.com"); // this is where you add the header
-    res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
-    res.setHeader("Access-Control-Allow-Headers", "Content-Type");
-    res.setHeader("Access-Control-Allow-Credentials", "true");
-    
     const devTopic = req.body.devTopic;
+    const storeCity = req.body.storeCity;
+    const visitDate = req.body.visitDate;
+    const difLvlToFind = req.body.difLvlToFind;
+    const difLvlToUse = req.body.difLvlToUse;
+    const disabledSpaces = req.body.disabledSpaces;
+    const parkingKeywords = req.body.parkingKeywords;
+    const lobbyAesthetic = req.body.lobbyAesthetic;
+    const lobbySize = req.body.lobbySize;
+    const lobbySpeed = req.body.lobbySpeed;
+    const lobbyAtmos = req.body.lobbyAtmos;
+    const lobbyLighting = req.body.lobbyLighting;
+    const lobbyDisplays = req.body.lobbyDisplays;
+    const lobbyKeywords = req.body.lobbyKeywords;
+    const btDesc = req.body.btDesc;
+    const btComfort = req.body.btComfort;
+    const btKnowledge = req.body.btKnowledge;
+    const btQuestion = req.body.btQuestion;
+    const btKeywords = req.body.btKeywords;
+    const cOpkgDesc = req.body.cOpkgDesc;
+    const coPmt = req.body.coPmt;
+    const coKeywords = req.body.coKeywords;
+    const unboxDiff = req.body.unboxDiff;
+    const strain = req.body.strain;
+    const unboxRateClr = req.body.unboxRateClr;
+    const unboxAppeal = req.body.unboxAppeal;
+    const unboxColors = req.body.unboxColors;
+    const unboxOdorInt = req.body.unboxOdorInt;
+    const unboxOdorNotes = req.body.unboxOdorNotes;
+    const unboxKeywords = req.body.unboxKeywords;
+    const prepOdorNotes = req.body.prepOdorNotes;
+    const prepMoisture = req.body.prepMoisture;
+    const prepTasteNotes = req.body.prepTasteNotes;
+    const prepKeywords = req.body.prepKeywords;
+    const finalTasteRate = req.body.finalTasteRate;
+    const finalTasteNotes = req.body.finalTasteNotes;
+    const finalEven = req.body.finalEven;
+    const finalAshClr = req.body.finalAshClr;
+    const finalMed = req.body.finalMed;
+    const finalKeywords = req.body.finalKeywords;
 
     const response = await openai.createCompletion({
       model: "text-davinci-003",
@@ -52,4 +86,6 @@ app.post('/', async (req, res) => {
   }
 })
 
-app.listen(3000, () => console.log('AI server started on http://localhost:3000'))
+app.listen(3000, () => console.log('AI server started on https://betterbydai.onrender.com'))
+
+// ver 1.2

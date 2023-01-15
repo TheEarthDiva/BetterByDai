@@ -156,3 +156,5 @@ const handleSubmit = async (e) => {
 }
 
 form.addEventListener('submit', handleSubmit)
+
+// ver 1.2
