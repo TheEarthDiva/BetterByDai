@@ -2,7 +2,14 @@ import express from 'express'
 import * as dotenv from 'dotenv'
 import cors from 'cors'
 import { Configuration, OpenAIApi } from 'openai'
-Access-Control-Allow-Origin: https://jadestees.com
+
+app.use((req, res, next) => {
+  res.setHeader("Access-Control-Allow-Origin", "https://jadestees.com");
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+  res.setHeader("Access-Control-Allow-Credentials", "true");
+  next();
+});
 
 dotenv.config()
 
